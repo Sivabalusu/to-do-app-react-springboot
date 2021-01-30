@@ -9,29 +9,31 @@ export default function ListTodo() {
     return (
         <div>
                  <h1>List Todos</h1>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>id</th>
-                             <th>description</th>
-                             <th>done</th>
-                             <th>targetDate</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                       {
-                         todos.map (
-                            todo =>
-                                <tr>
-                                    <td>{todo.id}</td>
-                                    <td>{todo.description}</td>
-                                    <td>{todo.done}</td>
-                                    <td>{todo.targetDate.toString()}</td>
-                                </tr>
-                         )
-                        }
-                     </tbody>
-                 </table>
+                 <div className="container">
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>description</th>
+                                <th>done</th>
+                                <th>targetDate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {
+                            todos.map (
+                                todo =>
+                                    <tr>
+                                        <td>{todo.id}</td>
+                                        <td>{todo.description}</td>
+                                        <td>{todo.done}</td>
+                                        <td>{todo.targetDate.toString()}</td>
+                                    </tr>
+                            )
+                            }
+                        </tbody>
+                    </table>
+                 </div>
 
         </div>
     )

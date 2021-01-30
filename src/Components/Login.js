@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { useHistory } from 'react-router-dom';
 
-export default function (props) {
+export default function Login() {
 
     const [loginSuccess, setLogin]=useState(true);
     const [userName, setUserName] = useState("siva");
@@ -25,12 +25,13 @@ export default function (props) {
         }
     }
     return (
-        <div>
-            {loginSuccess && <div>Login Successful</div>}
-            {loginSuccess || <div>Invalid Credentials</div>}
+        <div className="container">
+            <h1>Login</h1>
+            {/*loginSuccess && <div>Login Successful</div>*/}
+            {loginSuccess || <div className="alert alert-warning">Invalid Credentials</div>}
             User Name: <input type="text" name="name" value={userName} onChange={handleChangeUser}></input>
             Password : <input type="Password" name="password" value={password} onChange={handleChangePwd}></input>
-            <button name="login" onClick={loginClick}>Login</button>
+            <button className="btn btn-success" name="login" onClick={loginClick}>Login</button>
         </div>
     )
 }
