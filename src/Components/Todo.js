@@ -2,6 +2,7 @@ import React from 'react'
 import Login from './Login';
 import Welcome from './Welcome';
 import Error from './Error';
+import ListTodo from './ListTodo';
 import {BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
 
 export default function Todo() {
@@ -14,6 +15,7 @@ export default function Todo() {
                     <Route path="/" exact><Login></Login></Route>
                     <Route path="/login"><Login></Login></Route>
                     <Route path="/welcome/:name"><Welcome></Welcome></Route>
+                    <Route path="/todolist"><ListTodo></ListTodo></Route>
                     <Route><Error></Error></Route>
                 </Switch> 
             </Router>
