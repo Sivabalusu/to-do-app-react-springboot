@@ -19,7 +19,7 @@ export default function (props) {
 
     const loginClick=()=>{
         if (userName==="siva" && password==="dummy") {
-            history.push("/welcome")
+            history.push(`/welcome/${userName}`)
         } else {
             setLogin(false);
         }

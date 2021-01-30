@@ -13,7 +13,7 @@ export default function Todo() {
                 <Switch>
                     <Route path="/" exact><Login></Login></Route>
                     <Route path="/login"><Login></Login></Route>
-                    <Route path="/welcome"><Welcome></Welcome></Route>
+                    <Route path="/welcome/:name"><Welcome></Welcome></Route>
                     <Route><Error></Error></Route>
                 </Switch> 
             </Router>
